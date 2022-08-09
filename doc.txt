@@ -30,28 +30,43 @@ Category {
 Product {
   _id,
   name: string,
-  desc: string,
-  media?: string[],
+  desc: string | null,
+  media?: string[] | null,
   
   sku: string,
   category: string,
   
+  meta?: [{
+    key: string,
+    value: string,
+  }] | null,
+  
   --------------------------------------------
-  unit?: string;
+  unit?: string, // unit name, not ID
   price?: number,
-  currency?: string,
+  currency?: string, // currency name, not ID
 }
 
 #####################################################################################################
 Stock {
   _id,
-  product: ObjectId,
+  sku: string,
   quantity: number,
-  purchasePrice: [{
-    date,
-    
+  ---------------------------------------
+  createdAt: Date,
+  updatedAt: Date,
+}
+
+#####################################################################################################
+Batch {
+  _id,
+  sku,
+  values: [{
+    number: number, // batch number, 1000, 1001, 1002, 1003
+    date: Date, // Full date
+    price: number,
+    quantity: number,
   }]
-  
 }
 
 #####################################################################################################
@@ -62,8 +77,7 @@ PurchaseOrder {
   createdAt: Date,
   updatedAt: Date,
   
-  user: ObjectId | null,
-  
+  user: ObjectId | null,  
     
   items: [{
     sku: string,
@@ -100,7 +114,6 @@ SalesOrder {
 Discount {
   _id,
   name: string, // 5-100
-  desc: string, // < 1000
   value: number, // 0-1
   active: boolean,
   startDate: Date,
@@ -110,12 +123,19 @@ Discount {
 #####################################################################################################
 Unit {
   _id,
-  name: string,
+  name: string, // unique
 }
 
 #####################################################################################################
 Currency {
   _id,
-  name: string,
+  name: string, // unique
 }
 
+#####################################################################################################
+ExchangeRate {
+  _id,
+  currencyFrom: string, // currency name, not ID
+  currencyTo: string, // currency name, not ID
+  value: number,
+}
