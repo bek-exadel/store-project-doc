@@ -45,6 +45,7 @@ Product {
   unit?: string, // unit name, not ID
   price?: number,
   currency?: string, // currency name, not ID
+  discount?: ObjectID | null,
 }
 
 #####################################################################################################
