@@ -1,3 +1,4 @@
+#####################################################################################################
 User {
   _id,
   username: string,
@@ -6,17 +7,17 @@ User {
   active: boolean,
 }
 
+#####################################################################################################
 Supplier {
   _id,
   name,
-  desc,
-  
-  active: boolean,
-  
+  desc,  
+  active: boolean,  
   address: string,
   contact: string,
 }
 
+#####################################################################################################
 Category {
   _id,
   name: string,
@@ -25,29 +26,43 @@ Category {
   parent?: ObjectId | null,
 }
 
+#####################################################################################################
 Product {
   _id,
   name: string,
   desc: string,
+  media?: string[],
   
   sku: string,
   category: string,
   
+  --------------------------------------------
   unit?: string;
   price?: number,
   currency?: string,
 }
 
-
+#####################################################################################################
 Stock {
   _id,
   product: ObjectId,
   quantity: number,
+  purchasePrice: [{
+    date,
+    
+  }]
+  
 }
 
+#####################################################################################################
 PurchaseOrder {
   _id,
-  supplier: ObjectId,
+  supplier: ObjectId | null,
+  
+  createdAt: Date,
+  updatedAt: Date,
+  
+  user: ObjectId | null,
   
     
   items: [{
@@ -59,30 +74,29 @@ PurchaseOrder {
   }],
 }
 
-
-
-
-
-
-
-
-
+#####################################################################################################
 SalesOrder {
   _id,
   customer: ObjectId | null,
   
+  createdAt: Date,
+  updatedAt: Date,
+  
+  user: ObjectId | null,  
   
   items: [{
     sku: string,
-    
-    discountName: string,
-    discountValue: number,
-  
-  }]
-  
-
+    name: string,
+    price: number,
+    unit: string | null,
+    quantity: number,    
+    discountName: string | null,
+    discountValue: number | null,    
+    total: number,
+  }],
 }
 
+#####################################################################################################
 Discount {
   _id,
   name: string, // 5-100
@@ -93,4 +107,15 @@ Discount {
   endDate: Date,
 }
 
+#####################################################################################################
+Unit {
+  _id,
+  name: string,
+}
+
+#####################################################################################################
+Currency {
+  _id,
+  name: string,
+}
 
