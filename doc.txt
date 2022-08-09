@@ -77,7 +77,8 @@ PurchaseOrder {
   createdAt: Date,
   updatedAt: Date,
   
-  user: ObjectId | null,  
+  user: ObjectId | null,
+  status: string,
     
   items: [{
     sku: string,
@@ -85,6 +86,7 @@ PurchaseOrder {
     unit: string,
     price: number,
     quantity: number,
+    total: number,
   }],
 }
 
@@ -96,7 +98,8 @@ SalesOrder {
   createdAt: Date,
   updatedAt: Date,
   
-  user: ObjectId | null,  
+  user: ObjectId | null,
+  status: string,
   
   items: [{
     sku: string,
@@ -139,3 +142,13 @@ ExchangeRate {
   currencyTo: string, // currency name, not ID
   value: number,
 }
+
+#####################################################################################################
+PurchaseReport {
+  _id,
+  date: string,
+  
+}
+
+#####################################################################################################
+SalesReport {}
