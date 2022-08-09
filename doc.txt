@@ -1,1 +1,52 @@
+User {
+  _id,
+  username: string,
+  password: string,
+  role: string,
+  active: boolean,
+}
+
+Supplier {
+  _id,
+  name,
+  desc,
+  
+  active: boolean,
+  
+  address: string,
+  contact: string,
+}
+
+Category {
+  _id,
+  name: string,
+  desc: string,
+  media?: string[],
+  parent?: ObjectId | null,
+}
+
+Product {
+  _id,
+  name: string,
+  desc: string,
+  
+  sku: string,
+  category: string,
+  
+  unit?: string;
+  price?: number,
+  currency?: string,
+}
+
+
+Stock {
+  _id,
+  product: ObjectId,
+  quantity: number,
+}
+
+Purchase {}
+
+Order {}
+
 
