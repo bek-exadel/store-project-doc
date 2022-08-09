@@ -45,8 +45,52 @@ Stock {
   quantity: number,
 }
 
-Purchase {}
+PurchaseOrder {
+  _id,
+  supplier: ObjectId,
+  
+    
+  items: [{
+    sku: string,
+    name: string,
+    unit: string,
+    price: number,
+    quantity: number,
+  }],
+}
 
-Order {}
+
+
+
+
+
+
+
+
+SalesOrder {
+  _id,
+  customer: ObjectId | null,
+  
+  
+  items: [{
+    sku: string,
+    
+    discountName: string,
+    discountValue: number,
+  
+  }]
+  
+
+}
+
+Discount {
+  _id,
+  name: string, // 5-100
+  desc: string, // < 1000
+  value: number, // 0-1
+  active: boolean,
+  startDate: Date,
+  endDate: Date,
+}
 
 
