@@ -1,48 +1,44 @@
 #####################################################################################################
 User {
   _id,
-  username: string,
-  password: string,
-  role: string,
-  active: boolean,
+  username: string, // minLength: 5, maxLength: 100, required
+  password: string, // minLength: 5, maxLength: 100, required
+  role: string, // minLength: 5, maxLength: 100, required
+  active: // boolean, default: true
 }
 
 #####################################################################################################
 Supplier {
   _id,
-  name,
-  desc,  
-  active: boolean,  
-  address: string,
-  contact: string,
+  name: string, // minLength: 5, maxLength: 100, required,
+  desc: string, // maxLength: 1000, default: null
+  active: boolean, // default: true
+  address: string, // maxLength: 100, default: null
+  contact: string, // maxLength: 100, default: null
 }
 
 #####################################################################################################
 Category {
   _id,
-  name: string,
-  desc: string,
-  media?: string[],
-  parent?: ObjectId | null,
+  name: string, // minLength: 5, maxLength: 100, required,
+  desc: string, // maxLength: 1000, default: null
+  media?: string[] | null, // default: null
+  parent?: ObjectId | null, // default: null
 }
 
 #####################################################################################################
 Product {
   _id,
-  name: string,
-  desc: string | null,
-  media?: string[] | null,
+  name: string, // minLength: 5, maxLength: 100, required,
+  desc: string | null, // maxLength: 1000, default: null
+  media?: string[] | null, // default: null
   
-  sku: string,
-  category: string,
+  sku: string, // minLength: 5, maxLength: 100, required,
+  category: ObjectId, // required
   
-  meta?: [{
-    key: string,
-    value: string,
-  }] | null,
+  meta?: [{ key: string, value: string }] | null, // default: null
   
-  --------------------------------------------
-  unit?: string, // unit name, not ID
+  unit?: string, // unit name, not ID, // default: null
   price?: number,
   currency?: string, // currency name, not ID
   discount?: ObjectID | null,
@@ -117,7 +113,7 @@ SalesOrder {
 #####################################################################################################
 Discount {
   _id,
-  name: string, // 5-100
+  name: string, // required, minLength: 5, maxLength: 100
   value: number, // 0-1
   active: boolean,
   startDate: Date,
@@ -127,29 +123,25 @@ Discount {
 #####################################################################################################
 Unit {
   _id,
-  name: string, // unique
+  name: string, // unique, required, minLength: 1, maxLength: 100
 }
 
 #####################################################################################################
 Currency {
   _id,
-  name: string, // unique
+  name: string, // unique, required, minLength: 3, maxLength: 100
 }
 
 #####################################################################################################
 ExchangeRate {
   _id,
-  currencyFrom: string, // currency name, not ID
-  currencyTo: string, // currency name, not ID
+  currencyFrom: string, // currency name, not ID, 
+  currencyTo: string, // currency name, not ID, 
   value: number,
 }
 
 #####################################################################################################
-PurchaseReport {
-  _id,
-  date: string,
-  
-}
+PurchaseReport {}
 
 #####################################################################################################
 SalesReport {}
