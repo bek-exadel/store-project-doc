@@ -1,0 +1,20 @@
+Admin
+  - User: CRUD
+  - PurchaseOrder: Read, Update
+
+
+Manager
+  - Category: CRUD
+  - Supplier: CRUD
+  - Product: CRUD
+  - Customer: CRUD
+  - Unit: CRUD
+  - Currency: CRUD
+  - Discount: CRUD
+  - ExchangeRate: CRUD
+
+  - PurchaseOrder: Read, Create
+  - SalesOrder: ReadAll
+
+Seller
+  - SalesOrder: ReadOwn, Create
