@@ -33,41 +33,43 @@ POST    /api/suppliers
 PUT     /api/suppliers/:id
 DELETE  /api/suppliers/:id
 
+6) Unit
+GET     /api/units
+GET     /api/units/:id
+POST    /api/units
+PUT     /api/units/:id
+DELETE  /api/units/:id
 
+7) Currencies
+GET     /api/currencies
+GET     /api/currencies/:id
+POST    /api/currencies
+PUT     /api/currencies/:id
+DELETE  /api/currencies/:id
 
-
-
-
-
-
-x) Batch
-GET     /api/batchs
-GET     /api/batchs/:id
-POST    /api/batchs
-PUT     /api/batchs/:id
-DELETE  /api/batchs/:id
-
-
-
-
-
-
-
-
-
-
-Discounts
+8) Discounts
 GET     /api/discounts
 GET     /api/discounts/:id
 POST    /api/discounts
 PUT     /api/discounts/:id
 DELETE  /api/discounts/:id
 
+9) ExchangeRates
+GET     /api/exchangeRates
+GET     /api/exchangeRates/:id
+POST    /api/exchangeRates
+PUT     /api/exchangeRates/:id
+DELETE  /api/exchangeRates/:id
 
+10) Customer
+GET     /api/customers
+GET     /api/customers/:id
+POST    /api/customers
+PUT     /api/customers/:id
+DELETE  /api/customers/:id
 
-Currencies
-GET     /api/currencies
-GET     /api/currencies/:id
-POST    /api/currencies
-PUT     /api/currencies/:id
-DELETE  /api/currencies/:id
+#################################################
+/api/purchaseOrders
+/api/salesOrders
+/api/stocks
+/api/batchs
