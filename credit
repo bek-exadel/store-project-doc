@@ -1,1 +1,63 @@
 salom
+Customer {
+  _id,
+  name,
+}
+
+Category {
+  _id,
+  parent: ObjectID | null,
+  name: string,
+  desc?: string | null,
+  media?: string[] | null,
+}
+
+Product {
+  _id,
+}
+
+LoanPlan {
+  _id,
+  name,
+  hasCollateral: boolean,
+  maxAmount: number,
+  minAmount: number,
+ 
+  duration: number,
+  downpayment: number,   
+}
+
+
+Loan {
+  _id,
+  customer: ObjectID, // userID
+  collaterals: [ObjectID], // userID
+  user: ObjectID, userID
+  
+  type: string, // enum: Method1, Method2, Method3, ....
+  
+  amount: number,
+  downpayment: number,  
+  duration: number, 0, 1, 2, 3, 4, ...-72
+  interest: number, 0-1,
+  total: number,
+  
+  payments: [{
+    dueDate: Date,
+    principal: number,
+    interest: number,
+    total: number,
+    
+    receivedDate: Date,
+    receivedAmount: number,
+    
+    
+    
+    
+    
+  }]
+  
+    
+  
+}
+
