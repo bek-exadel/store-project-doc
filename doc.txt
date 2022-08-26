@@ -90,7 +90,7 @@ PurchaseOrder {
 #####################################################################################################
 SalesOrder {
   _id,
-  customer: ObjectId | null,
+  customer: ObjectId | null, bu joyda  customer bazada yuq yoki userIdmi
   
   createdAt: Date,
   updatedAt: Date,
