@@ -1,1 +1,57 @@
+1 - Report.
+###########################################################################
+User Sales Report
+
+*Daily   |   Weekly    |   Monthly   |   Yearly
+-----------------------------------------------
+
+Select date:  [__________2020-01-01________ []]
+
+*All    -----------   $200,000         Details>
+*user1  -----         $50,000          Details>
+*user2  -----------   $110,000         Details>
+*user3  ---           $30,000          Details>
+*user4  -             $10,000          Details>
+###########################################################################
+
+***Izoh:
+  Daily - Kunlik, Weekly - Haftalik, Monthly - Oylik, Yearly - Yillik
+  Select data - Sana tanlaang, bu joyda kalendar bo'ladi, faqat bir kun sanani tanledi.
+  user1, user2, ... - bular userlarni <name> mi. Undan kiyin horizontal bar chart bo'ladi, bu usha qiymatga yarasha uzun kalta bo'ladi.
+  Details> - bu tugmani bosib qushimcha chuqurroq ma'lumot olishi mumkin, yani agar *Daily tanlangan bo'sa va *user1 ni to'g'risidagi Details> bosilsa  
+  LineChart kurinishida va pastki horizontal o'qda 0-23 gacha (soatlar), va chap vertikal o'qda usha soatlarda qilingan savdo summasi va *user1 uchun jami 
+  $50,000 bulishi kerak. Shunga o'xshash, *Weekly tanlangan bo'lsa, pastki gorizontal o'qda [Du, Se, Ch, Pa, Ju, Sh, Ya], *Monthly tanlangan bo'lsa [1, 2,   3, ... 31], Yearly uchun [2021, 2022, 2023].
+
+
+
+2 - Category Sales Report
+###########################################################################
+Huddi tepadagi User Sales Report kabi faqat, *user1, *user2 larni urnida *category1, *category2, ... lar bo'ladi.
+
+
+
+3 - Product Sales Report
+###########################################################################
+Product Sales Report
+
+Daily   |   *Weekly    |   Monthly   |   Yearly
+-----------------------------------------------
+
+Select date:  [   2022-08-22 -> 2022-08-28  []]
+
+Product search: [name/sku/barcode.............]
+
+*productX...........$20,000            Details>
+###########################################################################
+
+***Izoh:
+  Product search: bu yearda search-input buladi, name/sku/barcode buyicha qidirsa buladi.
+  Details> joylari deyarli bir hil tepadagilar bilan.
+  
+  
+ 
+
+
+
+
 
