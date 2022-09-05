@@ -49,6 +49,65 @@ Product search: [name/sku/barcode.............]
   Details> joylari deyarli bir hil tepadagilar bilan.
   
   
+  
+  
+  
+  
+  
+  
+  
+  [{
+    user: ObjectId,
+    date: 'timestamp'
+    items: [
+      {
+        product,
+        sku,
+        qty,
+        price
+      }
+    ],
+    total: 5600
+  }]
+  
+  
+  
+  [
+    {
+      type: 'day', // 'week', 'month', 'year'
+      user: ObjectId,
+      date: '2022-01-01',
+      total: 200000,
+      details: [
+        { key: '', value: 45 }
+      ]
+    }
+  ]
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  //* t
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
  
 
 
